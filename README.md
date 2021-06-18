@@ -29,11 +29,16 @@ flutter pub get
 - Diseño de pantallas de login y registro con optimizaciones y código reutilizable
 - CustomInputFields
 - Navegación entre pantallas
+- Pull to refresh en una lista
+- Mensajes de burbujas
+- Animaciones de mensajes
 
 ## Características
 
 - Página de inicio de sesión (solo interfaz)
 - Página de registro de usuarios (solo interfaz)
+- Página de sala de chats (solo interfaz)
+- Página de chat (envio de mensajes con animaciones)
 
 # Autor
 
@@ -51,10 +56,14 @@ El código fuente de esta aplicación esta escrito por Bryan Aguilar (Desarrolla
   <tr>
     <td>Login Page</td>
     <td>Register Page</td>
+    <td>Users Page</td>
+    <td>Chat Page</td>
   </tr>
   <tr>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/login.png?raw=true" width="70%"></td>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/register.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/users.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/chat.png?raw=true" width="70%"></td>
   </tr>
  </table>
 <br>
