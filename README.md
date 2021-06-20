@@ -32,6 +32,10 @@ flutter pub get
 - Pull to refresh en una lista
 - Mensajes de burbujas
 - Animaciones de mensajes
+- Consumo de servicios Rest
+- Login y registro desde Flutter
+- Almacenar JWT Keychain / KeyStore
+- Mantener la pantalla del usuario si está autenticado
 
 ## Características
 
@@ -39,6 +43,16 @@ flutter pub get
 - Página de registro de usuarios (solo interfaz)
 - Página de sala de chats (solo interfaz)
 - Página de chat (envio de mensajes con animaciones)
+- Página de precarga
+- Logout
+
+
+## Librerías & Paquetes usados
+
+* `pull_to_refresh: ^2.0.0`: recarga la página con un gesto
+* `provider: ^5.0.0`: manejo de estado de la aplicación
+* `dio: ^4.0.0`: librería que permite hacer solicitudes http
+* `flutter_secure_storage: ^4.2.0`: librería para almacenamiento seguro en el dispositivo
 
 # Autor
 
@@ -57,13 +71,26 @@ El código fuente de esta aplicación esta escrito por Bryan Aguilar (Desarrolla
     <td>Login Page</td>
     <td>Register Page</td>
     <td>Users Page</td>
-    <td>Chat Page</td>
   </tr>
   <tr>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/login.png?raw=true" width="70%"></td>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/register.png?raw=true" width="70%"></td>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/users.png?raw=true" width="70%"></td>
+  </tr>
+ </table>
+<br>
+
+<br>
+<table>
+  <tr>
+    <td>Chat Page</td>
+    <td>Login Validate</td>
+    <td>Logout</td>
+  </tr>
+  <tr>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/chat.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/login_validate.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/logout.png?raw=true" width="70%"></td>
   </tr>
  </table>
 <br>

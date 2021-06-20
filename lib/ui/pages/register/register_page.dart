@@ -1,3 +1,4 @@
+import 'package:chat_app/data/services/auth_service.dart';
 import 'package:chat_app/ui/widgets/custom_button_widget.dart';
 import 'package:chat_app/ui/widgets/custom_input_widget.dart';
 import 'package:chat_app/ui/widgets/labels_widget.dart';
@@ -81,8 +82,8 @@ class _FormWidgetState extends State<FormWidget> {
           CustomButtonWidget(
             text: 'Registrar',
             onPressed: () {
-              print(this.emailController.text);
-              print(this.passwordController.text);
+              FocusScope.of(context).unfocus();
+              AuthService.instance.signUp(context, name: this.nameController.text, email: this.emailController.text.trim(), password: this.passwordController.text.trim());
             },
           ),
         ],

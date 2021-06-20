@@ -1,3 +1,4 @@
+import 'package:chat_app/data/services/auth_service.dart';
 import 'package:chat_app/ui/widgets/custom_button_widget.dart';
 import 'package:chat_app/ui/widgets/custom_input_widget.dart';
 import 'package:flutter/material.dart';
@@ -73,8 +74,8 @@ class _FormWidgetState extends State<FormWidget> {
           CustomButtonWidget(
             text: 'Ingresar',
             onPressed: () {
-              print(this.emailController.text);
-              print(this.passwordController.text);
+              FocusScope.of(context).unfocus();
+              AuthService.instance.signIn(context, email: this.emailController.text.trim(), password: this.passwordController.text.trim());
             },
           ),
         ],

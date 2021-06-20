@@ -1,4 +1,4 @@
-import 'package:chat_app/domain/entities/user.dart';
+import 'package:chat_app/domain/entities/user_mode.dart';
 import 'package:flutter/material.dart';
 
 class UserListTile extends StatelessWidget {

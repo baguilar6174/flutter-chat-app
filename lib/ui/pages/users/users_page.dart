@@ -1,5 +1,6 @@
-import 'package:chat_app/domain/entities/user.dart';
+import 'package:chat_app/domain/entities/user_mode.dart';
 import 'package:chat_app/ui/pages/users/widgets/user_listtile_widget.dart';
+import 'package:chat_app/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -9,16 +10,16 @@ class UsersPage extends StatefulWidget {
 }
 
 class _UsersPageState extends State<UsersPage> {
-  RefreshController _refreshController =
-      RefreshController(initialRefresh: false);
+  
+  RefreshController _refreshController = RefreshController(initialRefresh: false);
 
   final users = [
-    User(online: true, email: 'bryan@tes.com', name: 'Bryan', uuid: '1'),
+    User(online: true, email: 'bryan@tes.com', name: 'Bryan', code: '1'),
     User(
         online: false,
         email: 'alexander@tes.com',
         name: 'Alexander',
-        uuid: '2'),
+        code: '2'),
   ];
 
   @override
@@ -26,7 +27,7 @@ class _UsersPageState extends State<UsersPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Bryan Aguilar',
+          'Chat App',
           style: TextStyle(color: Colors.black54),
         ),
         backgroundColor: Colors.white,
@@ -37,7 +38,7 @@ class _UsersPageState extends State<UsersPage> {
             Icons.exit_to_app,
             color: Colors.black54,
           ),
-          onPressed: () {},
+          onPressed: _showDialog,
         ),
         actions: [
           Container(
@@ -72,5 +73,36 @@ class _UsersPageState extends State<UsersPage> {
     await Future.delayed(Duration(milliseconds: 2000));
     // if failed,use refreshFailed()
     _refreshController.refreshCompleted();
+  }
+
+  void _showDialog() {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text('¿Seguro quieres finalizar tu sesión?'),
+        actions: [
+          TextButton(
+            child: Text(
+              'Finalizar',
+              style: TextStyle(
+                color: Theme.of(context).accentColor,
+              ),
+            ),
+            onPressed: () => UserPreferences.instance.logOut(context),
+          ),
+          TextButton(
+            child: Text(
+              'Cancelar',
+              style: TextStyle(
+                color: Theme.of(context).accentColor,
+              ),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
+      ),
+    );
   }
 }
