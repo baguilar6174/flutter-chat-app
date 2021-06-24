@@ -5,6 +5,17 @@ String userToJson(User data) => json.encode(data.toJson());
 
 //     final user = userFromJson(jsonString);
 
+class Users {
+  List<User> users = [];
+  Users.fromJsonList(List<dynamic> jsonList) {
+    // ignore: unnecessary_null_comparison
+    if (jsonList == null) return;
+    jsonList.forEach((user) {
+      users.add(User.fromJson(user));
+    });
+  }
+}
+
 class User {
   User({
     required this.online,

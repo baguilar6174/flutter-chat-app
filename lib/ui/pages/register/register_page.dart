@@ -1,9 +1,11 @@
 import 'package:chat_app/data/services/auth_service.dart';
+import 'package:chat_app/data/services/socket_service.dart';
 import 'package:chat_app/ui/widgets/custom_button_widget.dart';
 import 'package:chat_app/ui/widgets/custom_input_widget.dart';
 import 'package:chat_app/ui/widgets/labels_widget.dart';
 import 'package:chat_app/ui/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 
 class RegisterPage extends StatelessWidget {
@@ -57,6 +59,9 @@ class _FormWidgetState extends State<FormWidget> {
 
   @override
   Widget build(BuildContext context) {
+
+    final socketService = Provider.of<SocketService>(context);
+
     return Container(
       margin: EdgeInsets.only(top: 40),
       padding: EdgeInsets.symmetric(horizontal: 50),
@@ -81,9 +86,10 @@ class _FormWidgetState extends State<FormWidget> {
           ),
           CustomButtonWidget(
             text: 'Registrar',
-            onPressed: () {
+            onPressed: () async {
               FocusScope.of(context).unfocus();
-              AuthService.instance.signUp(context, name: this.nameController.text, email: this.emailController.text.trim(), password: this.passwordController.text.trim());
+              await AuthService.instance.signUp(context, name: this.nameController.text, email: this.emailController.text.trim(), password: this.passwordController.text.trim());
+              socketService.connect();
             },
           ),
         ],

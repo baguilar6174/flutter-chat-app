@@ -1,7 +1,10 @@
+import 'package:chat_app/data/services/client_service.dart';
+import 'package:chat_app/data/services/socket_service.dart';
 import 'package:chat_app/domain/entities/user_mode.dart';
 import 'package:chat_app/ui/pages/users/widgets/user_listtile_widget.dart';
 import 'package:chat_app/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class UsersPage extends StatefulWidget {
@@ -12,18 +15,19 @@ class UsersPage extends StatefulWidget {
 class _UsersPageState extends State<UsersPage> {
   
   RefreshController _refreshController = RefreshController(initialRefresh: false);
+  List<User> _users = [];
 
-  final users = [
-    User(online: true, email: 'bryan@tes.com', name: 'Bryan', code: '1'),
-    User(
-        online: false,
-        email: 'alexander@tes.com',
-        name: 'Alexander',
-        code: '2'),
-  ];
+  @override
+  void initState() {
+    this._loadUsers();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+
+    final socketService = Provider.of<SocketService>(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -43,11 +47,16 @@ class _UsersPageState extends State<UsersPage> {
         actions: [
           Container(
             margin: EdgeInsets.only(right: 10),
-            child: Icon(
-              Icons.check_circle,
-              color: Colors.blue[400],
-            ),
-          )
+            child: socketService.serverStatus == ServerStatus.Offline
+                ? Icon(
+                    Icons.offline_bolt,
+                    color: Colors.redAccent,
+                  )
+                : Icon(
+                    Icons.check_circle,
+                    color: Colors.blue[300],
+                  ),
+          ),
         ],
       ),
       body: SmartRefresher(
@@ -62,20 +71,26 @@ class _UsersPageState extends State<UsersPage> {
   ListView _listViewUsers() {
     return ListView.separated(
       physics: BouncingScrollPhysics(),
-      itemBuilder: (context, i) => UserListTile(user: users[i]),
+      itemBuilder: (context, i) => UserListTile(user: _users[i]),
       separatorBuilder: (context, i) => Divider(),
-      itemCount: this.users.length,
+      itemCount: this._users.length,
     );
   }
 
   _loadUsers() async {
     // monitor network fetch
-    await Future.delayed(Duration(milliseconds: 2000));
+    this._users = await ClientService.instance.getUsers();
+    setState(() {
+      
+    });
     // if failed,use refreshFailed()
     _refreshController.refreshCompleted();
   }
 
   void _showDialog() {
+    
+    final socketService = Provider.of<SocketService>(context, listen: false);
+    
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
@@ -88,7 +103,10 @@ class _UsersPageState extends State<UsersPage> {
                 color: Theme.of(context).accentColor,
               ),
             ),
-            onPressed: () => UserPreferences.instance.logOut(context),
+            onPressed: () {
+              UserPreferences.instance.logOut(context);
+              socketService.disconnect();
+            }
           ),
           TextButton(
             child: Text(

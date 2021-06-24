@@ -53,6 +53,7 @@ flutter pub get
 * `provider: ^5.0.0`: manejo de estado de la aplicación
 * `dio: ^4.0.0`: librería que permite hacer solicitudes http
 * `flutter_secure_storage: ^4.2.0`: librería para almacenamiento seguro en el dispositivo
+* `socket_io_client: ^1.0.1 `: cliente para la comunicación con sockets
 
 # Autor
 

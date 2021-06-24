@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ChatMessageWidget extends StatelessWidget {
+  
+  final String ownerCode;
   final String text;
   final String uuid;
   final AnimationController animationController;
@@ -10,6 +12,7 @@ class ChatMessageWidget extends StatelessWidget {
     required this.text,
     required this.uuid,
     required this.animationController,
+    required this.ownerCode,
   }) : super(key: key);
 
   @override
@@ -19,7 +22,7 @@ class ChatMessageWidget extends StatelessWidget {
       child: SizeTransition(
         sizeFactor: CurvedAnimation(parent: this.animationController, curve: Curves.easeOut),
         child: Container(
-          child: this.uuid == '123' ?
+          child: this.uuid == this.ownerCode ?
           _myMessage():_notMyMessage(),
         ),
       ),
