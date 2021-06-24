@@ -36,6 +36,9 @@ flutter pub get
 - Login y registro desde Flutter
 - Almacenar JWT Keychain / KeyStore
 - Mantener la pantalla del usuario si está autenticado
+- Conectar sockets luego de inicio de sesión
+- Enviar y recibir mensajes
+- Almacenamiento de mensajes
 
 ## Características
 
@@ -59,7 +62,7 @@ flutter pub get
 
 El código fuente de esta aplicación esta escrito por Bryan Aguilar (Desarrollador de Eitecknologia)
 
-- Sitio web - [bryanaguilar](https://bryanaguilar.gatsbyjs.io/)
+- Sitio web - [bryanaguilar](https://www.bryan-aguilar.com/)
 - GitHub - [bryanAguilar001](https://github.com/bryanAguilar001)
 - LinkeIn - [bryanaguilar6174](https://www.linkedin.com/in/bryanaguilar6174)
 - Email - [bryan.aguilar6174@gmail.com](mailto:bryan.aguilar6174@gmail.com)
@@ -92,6 +95,19 @@ El código fuente de esta aplicación esta escrito por Bryan Aguilar (Desarrolla
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/chat.png?raw=true" width="70%"></td>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/login_validate.png?raw=true" width="70%"></td>
     <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/logout.png?raw=true" width="70%"></td>
+  </tr>
+ </table>
+<br>
+
+<br>
+<table>
+  <tr>
+    <td>Chat test</td>
+    <td>Chat test</td>
+  </tr>
+  <tr>
+    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/test1.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/test2.png?raw=true" width="70%"></td>
   </tr>
  </table>
 <br>
