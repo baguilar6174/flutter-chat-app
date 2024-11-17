@@ -1,72 +1,62 @@
 # Chat App
 
-Esta aplicación móvil presenta la implementación de un chat creado con Flutter que implementa sockets para la comunicación directa con el servidor. Inicio y Registro de usuarios, entre otras características
+This mobile application features a chat implementation built with Flutter that uses sockets for direct communication with the server. It includes User Login and Registration, among other features.
 
-## Cómo usar
+## How to Use
 
-Paso 1:
+Step 1:
 
-Tener el sdk de Flutter, este proyecto ha sido creado con Flutter en su versión `2.2.2` y Dart `2.13.3`.
+Have the Flutter SDK installed. This project was created with Flutter version `2.2.2` and Dart `2.13.3`.
 
-Paso 2:
+Step 2:
 
-Clonar el repositorio del proyecto con el siguiente comando
+Clone the project repository using the following command:
 
 ```
 git clone https://github.com/bryanAguilar001/flutter-chat-app.git
 ```
 
-Paso 3:
+Step 3:
 
-En la raíz del proyecto ejecute el siguiente comando en la consola para obtener las dependencias necesarias:
+In the project's root directory, run the following command in the terminal to get the necessary dependencies:
 
 ```
 flutter pub get
 ```
 
-## Qué aprendí
+## What I Learned
 
-- Diseño de pantallas de login y registro con optimizaciones y código reutilizable
+- Designing login and registration screens with optimizations and reusable code
 - CustomInputFields
-- Navegación entre pantallas
-- Pull to refresh en una lista
-- Mensajes de burbujas
-- Animaciones de mensajes
-- Consumo de servicios Rest
-- Login y registro desde Flutter
-- Almacenar JWT Keychain / KeyStore
-- Mantener la pantalla del usuario si está autenticado
-- Conectar sockets luego de inicio de sesión
-- Enviar y recibir mensajes
-- Almacenamiento de mensajes
+- Navigation between screens
+- Pull to refresh in a list
+- Message bubbles
+- Message animations
+- Consuming REST services
+- Login and registration from Flutter
+- Storing JWT Keychain / KeyStore
+- Maintaining the user's session if authenticated
+- Connecting sockets after login
+- Sending and receiving messages
+- Message storage
 
-## Características
+## Features
 
-- Página de inicio de sesión (solo interfaz)
-- Página de registro de usuarios (solo interfaz)
-- Página de sala de chats (solo interfaz)
-- Página de chat (envio de mensajes con animaciones)
-- Página de precarga
+- Login page (UI only)
+- User registration page (UI only)
+- Chat room page (UI only)
+- Chat page (sending messages with animations)
+- Preload page
 - Logout
 
+## Libraries & Packages Used
 
-## Librerías & Paquetes usados
-
-* `pull_to_refresh: ^2.0.0`: recarga la página con un gesto
-* `provider: ^5.0.0`: manejo de estado de la aplicación
-* `dio: ^4.0.0`: librería que permite hacer solicitudes http
-* `flutter_secure_storage: ^4.2.0`: librería para almacenamiento seguro en el dispositivo
-* `socket_io_client: ^1.0.1 `: cliente para la comunicación con sockets
-
-# Autor
-
-El código fuente de esta aplicación esta escrito por Bryan Aguilar (Desarrollador de Eitecknologia)
-
-- Website - [www.bryan-aguilar.com](https://www.bryan-aguilar.com/)
-- Medium - [baguilar6174](https://baguilar6174.medium.com/)
-- LinkeIn - [baguilar6174](https://www.linkedin.com/in/baguilar6174)
-- Email - [bryan.aguilar6174@gmail.com](mailto:bryan.aguilar6174@gmail.com)
-
+* `pull_to_refresh: ^2.0.0`: reloads the page with a gesture
+* `provider: ^5.0.0`: state management for the application
+* `dio: ^4.0.0`: library for making HTTP requests
+* `flutter_secure_storage: ^4.2.0`: library for secure storage on the device
+* `socket_io_client: ^1.0.1`: client for socket communication
+  
 ## Band Names App
 
 <br>
@@ -111,3 +101,9 @@ El código fuente de esta aplicación esta escrito por Bryan Aguilar (Desarrolla
   </tr>
  </table>
 <br>
+
+# Stay in touch
+
+- Website - [www.bryan-aguilar.com](https://www.bryan-aguilar.com/)
+- Medium - [baguilar6174](https://baguilar6174.medium.com/)
+- LinkedIn - [baguilar6174](https://www.linkedin.com/in/baguilar6174)
