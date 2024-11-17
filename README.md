@@ -67,9 +67,9 @@ flutter pub get
     <td>Users Page</td>
   </tr>
   <tr>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/login.png?raw=true" width="70%"></td>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/register.png?raw=true" width="70%"></td>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/users.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/login.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/register.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/users.png?raw=true" width="70%"></td>
   </tr>
  </table>
 <br>
@@ -82,9 +82,9 @@ flutter pub get
     <td>Logout</td>
   </tr>
   <tr>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/chat.png?raw=true" width="70%"></td>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/login_validate.png?raw=true" width="70%"></td>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/logout.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/chat.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/login_validate.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/logout.png?raw=true" width="70%"></td>
   </tr>
  </table>
 <br>
@@ -96,8 +96,8 @@ flutter pub get
     <td>Chat test</td>
   </tr>
   <tr>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/test1.png?raw=true" width="70%"></td>
-    <td align="center" valign="center"><img src="https://github.com/bryanAguilar001/flutter-chat-app/blob/main/media/test2.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/test1.png?raw=true" width="70%"></td>
+    <td align="center" valign="center"><img src="./media/test2.png?raw=true" width="70%"></td>
   </tr>
  </table>
 <br>
