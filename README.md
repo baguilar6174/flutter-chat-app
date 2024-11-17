@@ -13,7 +13,7 @@ Step 2:
 Clone the project repository using the following command:
 
 ```
-git clone https://github.com/bryanAguilar001/flutter-chat-app.git
+git clone https://github.com/baguilar6174/flutter-chat-app.git
 ```
 
 Step 3:
